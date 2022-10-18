@@ -974,6 +974,12 @@ export interface TransactionRiskReport {
  */
 export interface Transactions200Response {
     /**
+     * Use this as `cursor` in the next request to get the next page. The `page_cursor` has a one hour validity.
+     * @type {string}
+     * @memberof Transactions200Response
+     */
+    'page_cursor'?: string;
+    /**
      * 
      * @type {Array<Transactions200ResponseAccountsInner>}
      * @memberof Transactions200Response
@@ -1627,14 +1633,16 @@ export const AggregatedInfoApiAxiosParamCreator = function (configuration?: Conf
         /**
          * 
          * @summary Get transactions
-         * @param {string} [since] Set time from which the transactions will be get. The parameter is passed as-is to backend services. The default value is 30 days before the actual date or 30 days before the date specified in \&quot;until\&quot; parameter. 
-         * @param {string} [until] Set time to which the transactions will be get. The parameter is passed as-is to backend services. The default value is the actual date. 
+         * @param {string} [since] Set time from which the transactions will be get. 
+         * @param {string} [until] Set time to which the transactions will be get. The default value is the actual date. 
+         * @param {number} [limit] Limit the number of the transactions in the response. Default page size is 50. 
+         * @param {string} [cursor] Specify on requesting the next page. Use the &#x60;page_cursor&#x60; from the previous response. 
          * @param {string} [currency] Currency to convert to. 
          * @param {string} [accountFilter] Filter results to only provided account. When omitted, it returns all transactions from all accounts. 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        transactions: async (since?: string, until?: string, currency?: string, accountFilter?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        transactions: async (since?: string, until?: string, limit?: number, cursor?: string, currency?: string, accountFilter?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/v1/aggregate/transactions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1661,6 +1669,14 @@ export const AggregatedInfoApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['until'] = (until as any instanceof Date) ?
                     (until as any).toISOString().substr(0,10) :
                     until;
+            }
+
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
+            }
+
+            if (cursor !== undefined) {
+                localVarQueryParameter['cursor'] = cursor;
             }
 
             if (currency !== undefined) {
@@ -1736,15 +1752,17 @@ export const AggregatedInfoApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @summary Get transactions
-         * @param {string} [since] Set time from which the transactions will be get. The parameter is passed as-is to backend services. The default value is 30 days before the actual date or 30 days before the date specified in \&quot;until\&quot; parameter. 
-         * @param {string} [until] Set time to which the transactions will be get. The parameter is passed as-is to backend services. The default value is the actual date. 
+         * @param {string} [since] Set time from which the transactions will be get. 
+         * @param {string} [until] Set time to which the transactions will be get. The default value is the actual date. 
+         * @param {number} [limit] Limit the number of the transactions in the response. Default page size is 50. 
+         * @param {string} [cursor] Specify on requesting the next page. Use the &#x60;page_cursor&#x60; from the previous response. 
          * @param {string} [currency] Currency to convert to. 
          * @param {string} [accountFilter] Filter results to only provided account. When omitted, it returns all transactions from all accounts. 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async transactions(since?: string, until?: string, currency?: string, accountFilter?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Transactions200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.transactions(since, until, currency, accountFilter, options);
+        async transactions(since?: string, until?: string, limit?: number, cursor?: string, currency?: string, accountFilter?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Transactions200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.transactions(since, until, limit, cursor, currency, accountFilter, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1797,15 +1815,17 @@ export const AggregatedInfoApiFactory = function (configuration?: Configuration,
         /**
          * 
          * @summary Get transactions
-         * @param {string} [since] Set time from which the transactions will be get. The parameter is passed as-is to backend services. The default value is 30 days before the actual date or 30 days before the date specified in \&quot;until\&quot; parameter. 
-         * @param {string} [until] Set time to which the transactions will be get. The parameter is passed as-is to backend services. The default value is the actual date. 
+         * @param {string} [since] Set time from which the transactions will be get. 
+         * @param {string} [until] Set time to which the transactions will be get. The default value is the actual date. 
+         * @param {number} [limit] Limit the number of the transactions in the response. Default page size is 50. 
+         * @param {string} [cursor] Specify on requesting the next page. Use the &#x60;page_cursor&#x60; from the previous response. 
          * @param {string} [currency] Currency to convert to. 
          * @param {string} [accountFilter] Filter results to only provided account. When omitted, it returns all transactions from all accounts. 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        transactions(since?: string, until?: string, currency?: string, accountFilter?: string, options?: any): AxiosPromise<Transactions200Response> {
-            return localVarFp.transactions(since, until, currency, accountFilter, options).then((request) => request(axios, basePath));
+        transactions(since?: string, until?: string, limit?: number, cursor?: string, currency?: string, accountFilter?: string, options?: any): AxiosPromise<Transactions200Response> {
+            return localVarFp.transactions(since, until, limit, cursor, currency, accountFilter, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1865,16 +1885,18 @@ export class AggregatedInfoApi extends BaseAPI {
     /**
      * 
      * @summary Get transactions
-     * @param {string} [since] Set time from which the transactions will be get. The parameter is passed as-is to backend services. The default value is 30 days before the actual date or 30 days before the date specified in \&quot;until\&quot; parameter. 
-     * @param {string} [until] Set time to which the transactions will be get. The parameter is passed as-is to backend services. The default value is the actual date. 
+     * @param {string} [since] Set time from which the transactions will be get. 
+     * @param {string} [until] Set time to which the transactions will be get. The default value is the actual date. 
+     * @param {number} [limit] Limit the number of the transactions in the response. Default page size is 50. 
+     * @param {string} [cursor] Specify on requesting the next page. Use the &#x60;page_cursor&#x60; from the previous response. 
      * @param {string} [currency] Currency to convert to. 
      * @param {string} [accountFilter] Filter results to only provided account. When omitted, it returns all transactions from all accounts. 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AggregatedInfoApi
      */
-    public transactions(since?: string, until?: string, currency?: string, accountFilter?: string, options?: AxiosRequestConfig) {
-        return AggregatedInfoApiFp(this.configuration).transactions(since, until, currency, accountFilter, options).then((request) => request(this.axios, this.basePath));
+    public transactions(since?: string, until?: string, limit?: number, cursor?: string, currency?: string, accountFilter?: string, options?: AxiosRequestConfig) {
+        return AggregatedInfoApiFp(this.configuration).transactions(since, until, limit, cursor, currency, accountFilter, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
