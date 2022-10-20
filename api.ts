@@ -751,6 +751,74 @@ export interface GetUser404Response {
     'message'?: string;
 }
 /**
+ * String - Relevant metadata for NFT contract. This is useful for viewing image url, traits, etc. without having to follow the metadata url in tokenUri to parse manually.
+ * @export
+ * @interface Metadata
+ */
+export interface Metadata {
+    /**
+     * String - URL to the NFT asset image. Can be standard URLs pointing to images on conventional servers, IPFS, or Arweave. Most types of images (SVGs, PNGs, JPEGs, etc.) are supported by NFT marketplaces.
+     * @type {string}
+     * @memberof Metadata
+     */
+    'image'?: string;
+    /**
+     * String - The image URL that appears alongside the asset image on NFT platforms.
+     * @type {string}
+     * @memberof Metadata
+     */
+    'external_url'?: string;
+    /**
+     * String - Background color of the NFT item. Usually must be defined as a six-character hexadecimal.
+     * @type {string}
+     * @memberof Metadata
+     */
+    'background_color'?: string;
+    /**
+     * String - Name of the NFT asset.
+     * @type {string}
+     * @memberof Metadata
+     */
+    'name'?: string;
+    /**
+     * String - Human-readable description of the NFT asset. (Markdown is supported/rendered on OpenSea and other NFT platforms)
+     * @type {string}
+     * @memberof Metadata
+     */
+    'description'?: string;
+    /**
+     * Object - Traits/attributes/characteristics for each NFT asset.
+     * @type {Array<MetadataAttributesInner>}
+     * @memberof Metadata
+     */
+    'attributes'?: Array<MetadataAttributesInner>;
+    /**
+     * 
+     * @type {NftMedia}
+     * @memberof Metadata
+     */
+    'media'?: NftMedia;
+}
+/**
+ * 
+ * @export
+ * @interface MetadataAttributesInner
+ */
+export interface MetadataAttributesInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof MetadataAttributesInner
+     */
+    'value'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof MetadataAttributesInner
+     */
+    'trait_type'?: string;
+}
+/**
  * Movement
  * @export
  * @interface Movement
@@ -810,6 +878,298 @@ export interface Movement {
      * @memberof Movement
      */
     'image_url'?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface NFTMetadata200ResponseValue
+ */
+export interface NFTMetadata200ResponseValue {
+    /**
+     * 
+     * @type {Array<OwnedNft>}
+     * @memberof NFTMetadata200ResponseValue
+     */
+    'ownedNfts'?: Array<OwnedNft>;
+    /**
+     * String - Total number of NFTs owned by the given address.
+     * @type {string}
+     * @memberof NFTMetadata200ResponseValue
+     */
+    'totalCount'?: string;
+    /**
+     * String - The canonical head block hash of when your request was received
+     * @type {string}
+     * @memberof NFTMetadata200ResponseValue
+     */
+    'blockHash'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface NftContractMetadata
+ */
+export interface NftContractMetadata {
+    /**
+     * String - NFT contract name.
+     * @type {string}
+     * @memberof NftContractMetadata
+     */
+    'name'?: string;
+    /**
+     * String - NFT contract symbol abbreviation.
+     * @type {string}
+     * @memberof NftContractMetadata
+     */
+    'symbol'?: string;
+    /**
+     * String - Total number of NFTs in a given NFT collection.
+     * @type {string}
+     * @memberof NftContractMetadata
+     */
+    'totalSupply'?: string;
+    /**
+     * String - \'ERC721\' or \'ERC1155\'
+     * @type {string}
+     * @memberof NftContractMetadata
+     */
+    'tokenType'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface NftId
+ */
+export interface NftId {
+    /**
+     * String - The ID of the token. Can be in hex or decimal format.
+     * @type {string}
+     * @memberof NftId
+     */
+    'tokenId'?: string;
+    /**
+     * 
+     * @type {NftIdTokenMetadata}
+     * @memberof NftId
+     */
+    'tokenMetadata'?: NftIdTokenMetadata;
+}
+/**
+ * 
+ * @export
+ * @interface NftIdTokenMetadata
+ */
+export interface NftIdTokenMetadata {
+    /**
+     * String - \'ERC721\' or \'ERC1155\'
+     * @type {string}
+     * @memberof NftIdTokenMetadata
+     */
+    'tokenType'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface NftMedia
+ */
+export interface NftMedia {
+    /**
+     * String - Uri representing the location of the NFT\'s original metadata blob. This is a backup for you to parse when the metadata field is not automatically populated.
+     * @type {string}
+     * @memberof NftMedia
+     */
+    'raw'?: string;
+    /**
+     * String - Public gateway uri for the raw uri above.
+     * @type {string}
+     * @memberof NftMedia
+     */
+    'gateway'?: string;
+    /**
+     * URL for a resized thumbnail of the NFT media asset.
+     * @type {string}
+     * @memberof NftMedia
+     */
+    'thumbnail'?: string;
+    /**
+     * The media format (jpg, gif, png, etc.) of the gateway and thumbnail assets.
+     * @type {string}
+     * @memberof NftMedia
+     */
+    'format'?: string;
+    /**
+     * The size of the media asset in bytes.
+     * @type {number}
+     * @memberof NftMedia
+     */
+    'bytes'?: number;
+}
+/**
+ * Information about whether and why a contract was marked as spam.
+ * @export
+ * @interface NftSpamInfo
+ */
+export interface NftSpamInfo {
+    /**
+     * \"true\" if contract is spam, else \"false\"
+     * @type {string}
+     * @memberof NftSpamInfo
+     */
+    'isSpam'?: string;
+    /**
+     * List of reasons why a contract was classified as spam.
+     * @type {Array<string>}
+     * @memberof NftSpamInfo
+     */
+    'classifications'?: Array<string>;
+}
+/**
+ * 
+ * @export
+ * @interface NftTokenUri
+ */
+export interface NftTokenUri {
+    /**
+     * String - Uri representing the location of the NFT\'s original metadata blob. This is a backup for you to parse when the metadata field is not automatically populated.
+     * @type {string}
+     * @memberof NftTokenUri
+     */
+    'raw'?: string;
+    /**
+     * String - Public gateway uri for the raw uri above.
+     * @type {string}
+     * @memberof NftTokenUri
+     */
+    'gateway'?: string;
+}
+/**
+ * OwnedNft
+ * @export
+ * @interface OwnedNft
+ */
+export interface OwnedNft {
+    /**
+     * 
+     * @type {OwnedNftContract}
+     * @memberof OwnedNft
+     */
+    'contract'?: OwnedNftContract;
+    /**
+     * 
+     * @type {NftId}
+     * @memberof OwnedNft
+     */
+    'id'?: NftId;
+    /**
+     * String - Token balance
+     * @type {string}
+     * @memberof OwnedNft
+     */
+    'balance'?: string;
+    /**
+     * String - Name of the NFT asset.
+     * @type {string}
+     * @memberof OwnedNft
+     */
+    'title'?: string;
+    /**
+     * String - Brief human-readable description
+     * @type {string}
+     * @memberof OwnedNft
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {NftTokenUri}
+     * @memberof OwnedNft
+     */
+    'tokenUri'?: NftTokenUri;
+    /**
+     * 
+     * @type {OwnedNftMedia}
+     * @memberof OwnedNft
+     */
+    'media'?: OwnedNftMedia;
+    /**
+     * 
+     * @type {Metadata}
+     * @memberof OwnedNft
+     */
+    'metadata'?: Metadata;
+    /**
+     * String - ISO timestamp of the last cache refresh for the information returned in the metadata field.
+     * @type {string}
+     * @memberof OwnedNft
+     */
+    'timeLastUpdated'?: string;
+    /**
+     * String - A string describing a particular reason that we were unable to fetch complete metadata for the NFT.
+     * @type {string}
+     * @memberof OwnedNft
+     */
+    'error'?: string;
+    /**
+     * 
+     * @type {NftContractMetadata}
+     * @memberof OwnedNft
+     */
+    'contractMetadata'?: NftContractMetadata;
+    /**
+     * 
+     * @type {NftSpamInfo}
+     * @memberof OwnedNft
+     */
+    'spamInfo'?: NftSpamInfo;
+}
+/**
+ * Object - Contract for returned NFT
+ * @export
+ * @interface OwnedNftContract
+ */
+export interface OwnedNftContract {
+    /**
+     * String - Address of NFT contract.
+     * @type {string}
+     * @memberof OwnedNftContract
+     */
+    'address'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface OwnedNftMedia
+ */
+export interface OwnedNftMedia {
+    /**
+     * String - Uri representing the location of the NFT\'s original metadata blob. This is a backup for you to parse when the metadata field is not automatically populated.
+     * @type {string}
+     * @memberof OwnedNftMedia
+     */
+    'raw'?: string;
+    /**
+     * String - Public gateway uri for the raw uri above.
+     * @type {string}
+     * @memberof OwnedNftMedia
+     */
+    'gateway'?: string;
+    /**
+     * URL for a resized thumbnail of the NFT media asset.
+     * @type {string}
+     * @memberof OwnedNftMedia
+     */
+    'thumbnail'?: string;
+    /**
+     * The media format (jpg, gif, png, etc.) of the gateway and thumbnail assets.
+     * @type {string}
+     * @memberof OwnedNftMedia
+     */
+    'format'?: string;
+    /**
+     * The size of the media asset in bytes.
+     * @type {number}
+     * @memberof OwnedNftMedia
+     */
+    'bytes'?: number;
 }
 /**
  * RiskReportCategory
@@ -1632,6 +1992,40 @@ export const AggregatedInfoApiAxiosParamCreator = function (configuration?: Conf
         },
         /**
          * 
+         * @summary Get NFT metadata
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nFTMetadata: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/v1/aggregate/nft_metadata`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserJWT required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary Get transactions
          * @param {string} [since] Set time from which the transactions will be get. 
          * @param {string} [until] Set time to which the transactions will be get. The default value is the actual date. 
@@ -1751,6 +2145,16 @@ export const AggregatedInfoApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary Get NFT metadata
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async nFTMetadata(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: NFTMetadata200ResponseValue; }>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.nFTMetadata(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary Get transactions
          * @param {string} [since] Set time from which the transactions will be get. 
          * @param {string} [until] Set time to which the transactions will be get. The default value is the actual date. 
@@ -1811,6 +2215,15 @@ export const AggregatedInfoApiFactory = function (configuration?: Configuration,
          */
         balance(currency?: string, options?: any): AxiosPromise<Balance200Response> {
             return localVarFp.balance(currency, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Get NFT metadata
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        nFTMetadata(options?: any): AxiosPromise<{ [key: string]: NFTMetadata200ResponseValue; }> {
+            return localVarFp.nFTMetadata(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -1880,6 +2293,17 @@ export class AggregatedInfoApi extends BaseAPI {
      */
     public balance(currency?: string, options?: AxiosRequestConfig) {
         return AggregatedInfoApiFp(this.configuration).balance(currency, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Get NFT metadata
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AggregatedInfoApi
+     */
+    public nFTMetadata(options?: AxiosRequestConfig) {
+        return AggregatedInfoApiFp(this.configuration).nFTMetadata(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
