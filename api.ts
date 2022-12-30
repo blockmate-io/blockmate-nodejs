@@ -3549,7 +3549,7 @@ export class AggregatedInfoApi extends BaseAPI {
 export const AnalyticsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Get analytics focused on gaming. All empty values are omitted from the response.
+         * Get analytics focused on gaming. All empty values are omitted from the response. Values are recalculated once per day.
          * @summary Get analytics focused on gaming
          * @param {string} accountProvider URL value from account_providers method
          * @param {string} accountId Account ID
@@ -3601,7 +3601,7 @@ export const AnalyticsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = AnalyticsApiAxiosParamCreator(configuration)
     return {
         /**
-         * Get analytics focused on gaming. All empty values are omitted from the response.
+         * Get analytics focused on gaming. All empty values are omitted from the response. Values are recalculated once per day.
          * @summary Get analytics focused on gaming
          * @param {string} accountProvider URL value from account_providers method
          * @param {string} accountId Account ID
@@ -3623,7 +3623,7 @@ export const AnalyticsApiFactory = function (configuration?: Configuration, base
     const localVarFp = AnalyticsApiFp(configuration)
     return {
         /**
-         * Get analytics focused on gaming. All empty values are omitted from the response.
+         * Get analytics focused on gaming. All empty values are omitted from the response. Values are recalculated once per day.
          * @summary Get analytics focused on gaming
          * @param {string} accountProvider URL value from account_providers method
          * @param {string} accountId Account ID
@@ -3644,7 +3644,7 @@ export const AnalyticsApiFactory = function (configuration?: Configuration, base
  */
 export class AnalyticsApi extends BaseAPI {
     /**
-     * Get analytics focused on gaming. All empty values are omitted from the response.
+     * Get analytics focused on gaming. All empty values are omitted from the response. Values are recalculated once per day.
      * @summary Get analytics focused on gaming
      * @param {string} accountProvider URL value from account_providers method
      * @param {string} accountId Account ID
