@@ -322,6 +322,1006 @@ export interface Amount {
     'image_url'?: string | null;
 }
 /**
+ * Analytics
+ * @export
+ * @interface Analytics
+ */
+export interface Analytics {
+    [key: string]: Analytics1 | any;
+
+    /**
+     * Transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_forever_onchain'?: number;
+    /**
+     * NFT transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_forever_nft'?: number;
+    /**
+     * Gaming transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_forever_gaming'?: number;
+    /**
+     * Gambling transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_forever_gambling'?: number;
+    /**
+     * Transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_365_onchain'?: number;
+    /**
+     * NFT transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_365_nft'?: number;
+    /**
+     * Gaming transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_365_gaming'?: number;
+    /**
+     * Gambling transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_365_gambling'?: number;
+    /**
+     * Transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_31_60_onchain'?: number;
+    /**
+     * NFT transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_31_60_nft'?: number;
+    /**
+     * Gaming transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_31_60_gaming'?: number;
+    /**
+     * Gambling transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_31_60_gambling'?: number;
+    /**
+     * Transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_30_onchain'?: number;
+    /**
+     * NFT transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_30_nft'?: number;
+    /**
+     * Gaming transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_30_gaming'?: number;
+    /**
+     * Gambling transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_30_gambling'?: number;
+    /**
+     * Transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_7_onchain'?: number;
+    /**
+     * NFT transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_7_nft'?: number;
+    /**
+     * Gaming transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_7_gaming'?: number;
+    /**
+     * Gambling transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_all_7_gambling'?: number;
+    /**
+     * IN transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_forever_onchain'?: number;
+    /**
+     * IN NFT transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_forever_nft'?: number;
+    /**
+     * IN gaming transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_forever_gaming'?: number;
+    /**
+     * IN gambling transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_forever_gambling'?: number;
+    /**
+     * IN transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_365_onchain'?: number;
+    /**
+     * IN NFT transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_365_nft'?: number;
+    /**
+     * IN gaming transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_365_gaming'?: number;
+    /**
+     * IN gambling transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_365_gambling'?: number;
+    /**
+     * IN transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_31_60_onchain'?: number;
+    /**
+     * IN NFT transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_31_60_nft'?: number;
+    /**
+     * IN gaming transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_31_60_gaming'?: number;
+    /**
+     * IN gambling transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_31_60_gambling'?: number;
+    /**
+     * IN transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_30_onchain'?: number;
+    /**
+     * IN NFT transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_30_nft'?: number;
+    /**
+     * IN gaming transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_30_gaming'?: number;
+    /**
+     * IN gambling transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_30_gambling'?: number;
+    /**
+     * IN transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_7_onchain'?: number;
+    /**
+     * IN NFT transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_7_nft'?: number;
+    /**
+     * IN gaming transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_7_gaming'?: number;
+    /**
+     * IN gambling transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_in_7_gambling'?: number;
+    /**
+     * OUT transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_forever_onchain'?: number;
+    /**
+     * OUT NFT transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_forever_nft'?: number;
+    /**
+     * OUT gaming transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_forever_gaming'?: number;
+    /**
+     * OUT gambling transactions count
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_forever_gambling'?: number;
+    /**
+     * OUT transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_365_onchain'?: number;
+    /**
+     * OUT NFT transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_365_nft'?: number;
+    /**
+     * OUT gaming transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_365_gaming'?: number;
+    /**
+     * OUT gambling transactions count during last year
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_365_gambling'?: number;
+    /**
+     * OUT transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_31_60_onchain'?: number;
+    /**
+     * OUT NFT transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_31_60_nft'?: number;
+    /**
+     * OUT gaming transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_31_60_gaming'?: number;
+    /**
+     * OUT gambling transactions count during previous month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_31_60_gambling'?: number;
+    /**
+     * OUT transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_30_onchain'?: number;
+    /**
+     * OUT NFT transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_30_nft'?: number;
+    /**
+     * OUT gaming transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_30_gaming'?: number;
+    /**
+     * OUT gambling transactions count during last month
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_30_gambling'?: number;
+    /**
+     * OUT transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_7_onchain'?: number;
+    /**
+     * OUT NFT transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_7_nft'?: number;
+    /**
+     * OUT gaming transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_7_gaming'?: number;
+    /**
+     * OUT gambling transactions count during last week
+     * @type {number}
+     * @memberof Analytics
+     */
+    'count_txs_out_7_gambling'?: number;
+    /**
+     * Time when first transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_all_onchain'?: string;
+    /**
+     * Time when first NFT transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_all_nft'?: string;
+    /**
+     * Time when first gaming transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_all_gaming'?: string;
+    /**
+     * Time when first gambling transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_all_gambling'?: string;
+    /**
+     * Time when first IN transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_in_onchain'?: string;
+    /**
+     * Time when first IN NFT transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_in_nft'?: string;
+    /**
+     * Time when first IN gaming transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_in_gaming'?: string;
+    /**
+     * Time when first IN gambling transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_in_gambling'?: string;
+    /**
+     * Time when first OUT transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_out_onchain'?: string;
+    /**
+     * Time when first OUT NFT transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_out_nft'?: string;
+    /**
+     * Time when first OUT gaming transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_out_gaming'?: string;
+    /**
+     * Time when first OUT gambling transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'first_txs_out_gambling'?: string;
+    /**
+     * Time when last transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_all_onchain'?: string;
+    /**
+     * Time when last NFT transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_all_nft'?: string;
+    /**
+     * Time when last gaming transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_all_gaming'?: string;
+    /**
+     * Time when last gambling transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_all_gambling'?: string;
+    /**
+     * Time when last IN transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_in_onchain'?: string;
+    /**
+     * Time when last IN NFT transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_in_nft'?: string;
+    /**
+     * Time when last IN gaming transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_in_gaming'?: string;
+    /**
+     * Time when last IN gambling transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_in_gambling'?: string;
+    /**
+     * Time when last OUT transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_out_onchain'?: string;
+    /**
+     * Time when last OUT NFT transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_out_nft'?: string;
+    /**
+     * Time when last OUT gaming transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_out_gaming'?: string;
+    /**
+     * Time when last OUT gambling transaction occurred
+     * @type {string}
+     * @memberof Analytics
+     */
+    'last_txs_out_gambling'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface Analytics1
+ */
+export interface Analytics1 {
+    /**
+     * Sum of all transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_forever_onchain'?: number;
+    /**
+     * Sum of all NFT transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_forever_nft'?: number;
+    /**
+     * Sum of all gaming transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_forever_gaming'?: number;
+    /**
+     * Sum of all gambling transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_forever_gambling'?: number;
+    /**
+     * Sum of all transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_365_onchain'?: number;
+    /**
+     * Sum of all NFT transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_365_nft'?: number;
+    /**
+     * Sum of all gaming transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_365_gaming'?: number;
+    /**
+     * Sum of all gambling transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_365_gambling'?: number;
+    /**
+     * Sum of all transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_31_60_onchain'?: number;
+    /**
+     * Sum of all NFT transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_31_60_nft'?: number;
+    /**
+     * Sum of all gaming transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_31_60_gaming'?: number;
+    /**
+     * Sum of all gambling transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_31_60_gambling'?: number;
+    /**
+     * Sum of all transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_30_onchain'?: number;
+    /**
+     * Sum of all NFT transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_30_nft'?: number;
+    /**
+     * Sum of all gaming transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_30_gaming'?: number;
+    /**
+     * Sum of all gambling transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_30_gambling'?: number;
+    /**
+     * Sum of all transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_7_onchain'?: number;
+    /**
+     * Sum of all NFT transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_7_nft'?: number;
+    /**
+     * Sum of all gaming transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_7_gaming'?: number;
+    /**
+     * Sum of all gambling transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_all_7_gambling'?: number;
+    /**
+     * Sum of all IN transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_forever_onchain'?: number;
+    /**
+     * Sum of all IN NFT transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_forever_nft'?: number;
+    /**
+     * Sum of all IN gaming transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_forever_gaming'?: number;
+    /**
+     * Sum of all IN gambling transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_forever_gambling'?: number;
+    /**
+     * Sum of all IN transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_365_onchain'?: number;
+    /**
+     * Sum of all IN NFT transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_365_nft'?: number;
+    /**
+     * Sum of all IN gaming transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_365_gaming'?: number;
+    /**
+     * Sum of all IN gambling transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_365_gambling'?: number;
+    /**
+     * Sum of all IN transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_31_60_onchain'?: number;
+    /**
+     * Sum of all IN NFT transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_31_60_nft'?: number;
+    /**
+     * Sum of all IN gaming transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_31_60_gaming'?: number;
+    /**
+     * Sum of all IN gambling transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_31_60_gambling'?: number;
+    /**
+     * Sum of all IN transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_30_onchain'?: number;
+    /**
+     * Sum of all IN NFT transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_30_nft'?: number;
+    /**
+     * Sum of all IN gaming transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_30_gaming'?: number;
+    /**
+     * Sum of all IN gambling transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_30_gambling'?: number;
+    /**
+     * Sum of all IN transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_7_onchain'?: number;
+    /**
+     * Sum of all IN NFT transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_7_nft'?: number;
+    /**
+     * Sum of all IN gaming transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_7_gaming'?: number;
+    /**
+     * Sum of all IN gambling transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_in_7_gambling'?: number;
+    /**
+     * Sum of all OUT transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_forever_onchain'?: number;
+    /**
+     * Sum of all OUT NFT transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_forever_nft'?: number;
+    /**
+     * Sum of all OUT gaming transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_forever_gaming'?: number;
+    /**
+     * Sum of all OUT gambling transactions
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_forever_gambling'?: number;
+    /**
+     * Sum of all OUT transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_365_onchain'?: number;
+    /**
+     * Sum of all OUT NFT transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_365_nft'?: number;
+    /**
+     * Sum of all OUT gaming transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_365_gaming'?: number;
+    /**
+     * Sum of all OUT gambling transactions during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_365_gambling'?: number;
+    /**
+     * Sum of all OUT transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_31_60_onchain'?: number;
+    /**
+     * Sum of all OUT NFT transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_31_60_nft'?: number;
+    /**
+     * Sum of all OUT gaming transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_31_60_gaming'?: number;
+    /**
+     * Sum of all OUT gambling transactions during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_31_60_gambling'?: number;
+    /**
+     * Sum of all OUT transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_30_onchain'?: number;
+    /**
+     * Sum of all OUT NFT transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_30_nft'?: number;
+    /**
+     * Sum of all OUT gaming transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_30_gaming'?: number;
+    /**
+     * Sum of all OUT gambling transactions during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_30_gambling'?: number;
+    /**
+     * Sum of all OUT transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_7_onchain'?: number;
+    /**
+     * Sum of all OUT NFT transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_7_nft'?: number;
+    /**
+     * Sum of all OUT gaming transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_7_gaming'?: number;
+    /**
+     * Sum of all OUT gambling transactions during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'sum_txs_out_7_gambling'?: number;
+    /**
+     * Maximum balance
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_forever_onchain'?: number;
+    /**
+     * Maximum NFT balance
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_forever_nft'?: number;
+    /**
+     * Maximum gaming balance
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_forever_gaming'?: number;
+    /**
+     * Maximum gambing balance
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_forever_gambling'?: number;
+    /**
+     * Maximum balance during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_365_onchain'?: number;
+    /**
+     * Maximum NFT balance during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_365_nft'?: number;
+    /**
+     * Maximum gaming balance during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_365_gaming'?: number;
+    /**
+     * Maximum gambling balance during last year
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_365_gambling'?: number;
+    /**
+     * Maximum balance during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_31_60_onchain'?: number;
+    /**
+     * Maximum NFT balance during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_31_60_nft'?: number;
+    /**
+     * Maximum gaming balance during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_31_60_gaming'?: number;
+    /**
+     * Maximum gambling balance during previous month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_31_60_gambling'?: number;
+    /**
+     * Maximum balance during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_30_onchain'?: number;
+    /**
+     * Maximum NFT balance during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_30_nft'?: number;
+    /**
+     * Maximum gaming balance during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_30_gaming'?: number;
+    /**
+     * Maximum gambling balance during last month
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_30_gambling'?: number;
+    /**
+     * Maximum balance during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_7_onchain'?: number;
+    /**
+     * Maximum NFT balance during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_7_nft'?: number;
+    /**
+     * Maximum gaming balance during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_7_gaming'?: number;
+    /**
+     * Maximum gambling balance during last week
+     * @type {number}
+     * @memberof Analytics1
+     */
+    'max_balance_7_gambling'?: number;
+}
+/**
  * 
  * @export
  * @interface AuthUser200Response
@@ -730,1006 +1730,6 @@ export interface GetAddressRiskScore200Response {
      * @memberof GetAddressRiskScore200Response
      */
     'risk'?: number;
-}
-/**
- * 
- * @export
- * @interface GetAnalytics200Response
- */
-export interface GetAnalytics200Response {
-    [key: string]: GetAnalytics200ResponseValue | any;
-
-    /**
-     * Transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_forever_onchain'?: number;
-    /**
-     * NFT transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_forever_nft'?: number;
-    /**
-     * Gaming transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_forever_gaming'?: number;
-    /**
-     * Gambling transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_forever_gambling'?: number;
-    /**
-     * Transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_365_onchain'?: number;
-    /**
-     * NFT transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_365_nft'?: number;
-    /**
-     * Gaming transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_365_gaming'?: number;
-    /**
-     * Gambling transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_365_gambling'?: number;
-    /**
-     * Transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_31_60_onchain'?: number;
-    /**
-     * NFT transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_31_60_nft'?: number;
-    /**
-     * Gaming transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_31_60_gaming'?: number;
-    /**
-     * Gambling transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_31_60_gambling'?: number;
-    /**
-     * Transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_30_onchain'?: number;
-    /**
-     * NFT transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_30_nft'?: number;
-    /**
-     * Gaming transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_30_gaming'?: number;
-    /**
-     * Gambling transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_30_gambling'?: number;
-    /**
-     * Transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_7_onchain'?: number;
-    /**
-     * NFT transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_7_nft'?: number;
-    /**
-     * Gaming transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_7_gaming'?: number;
-    /**
-     * Gambling transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_all_7_gambling'?: number;
-    /**
-     * IN transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_forever_onchain'?: number;
-    /**
-     * IN NFT transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_forever_nft'?: number;
-    /**
-     * IN gaming transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_forever_gaming'?: number;
-    /**
-     * IN gambling transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_forever_gambling'?: number;
-    /**
-     * IN transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_365_onchain'?: number;
-    /**
-     * IN NFT transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_365_nft'?: number;
-    /**
-     * IN gaming transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_365_gaming'?: number;
-    /**
-     * IN gambling transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_365_gambling'?: number;
-    /**
-     * IN transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_31_60_onchain'?: number;
-    /**
-     * IN NFT transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_31_60_nft'?: number;
-    /**
-     * IN gaming transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_31_60_gaming'?: number;
-    /**
-     * IN gambling transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_31_60_gambling'?: number;
-    /**
-     * IN transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_30_onchain'?: number;
-    /**
-     * IN NFT transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_30_nft'?: number;
-    /**
-     * IN gaming transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_30_gaming'?: number;
-    /**
-     * IN gambling transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_30_gambling'?: number;
-    /**
-     * IN transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_7_onchain'?: number;
-    /**
-     * IN NFT transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_7_nft'?: number;
-    /**
-     * IN gaming transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_7_gaming'?: number;
-    /**
-     * IN gambling transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_in_7_gambling'?: number;
-    /**
-     * OUT transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_forever_onchain'?: number;
-    /**
-     * OUT NFT transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_forever_nft'?: number;
-    /**
-     * OUT gaming transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_forever_gaming'?: number;
-    /**
-     * OUT gambling transactions count
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_forever_gambling'?: number;
-    /**
-     * OUT transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_365_onchain'?: number;
-    /**
-     * OUT NFT transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_365_nft'?: number;
-    /**
-     * OUT gaming transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_365_gaming'?: number;
-    /**
-     * OUT gambling transactions count during last year
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_365_gambling'?: number;
-    /**
-     * OUT transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_31_60_onchain'?: number;
-    /**
-     * OUT NFT transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_31_60_nft'?: number;
-    /**
-     * OUT gaming transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_31_60_gaming'?: number;
-    /**
-     * OUT gambling transactions count during previous month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_31_60_gambling'?: number;
-    /**
-     * OUT transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_30_onchain'?: number;
-    /**
-     * OUT NFT transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_30_nft'?: number;
-    /**
-     * OUT gaming transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_30_gaming'?: number;
-    /**
-     * OUT gambling transactions count during last month
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_30_gambling'?: number;
-    /**
-     * OUT transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_7_onchain'?: number;
-    /**
-     * OUT NFT transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_7_nft'?: number;
-    /**
-     * OUT gaming transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_7_gaming'?: number;
-    /**
-     * OUT gambling transactions count during last week
-     * @type {number}
-     * @memberof GetAnalytics200Response
-     */
-    'count_txs_out_7_gambling'?: number;
-    /**
-     * Time when first transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_all_onchain'?: string;
-    /**
-     * Time when first NFT transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_all_nft'?: string;
-    /**
-     * Time when first gaming transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_all_gaming'?: string;
-    /**
-     * Time when first gambling transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_all_gambling'?: string;
-    /**
-     * Time when first IN transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_in_onchain'?: string;
-    /**
-     * Time when first IN NFT transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_in_nft'?: string;
-    /**
-     * Time when first IN gaming transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_in_gaming'?: string;
-    /**
-     * Time when first IN gambling transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_in_gambling'?: string;
-    /**
-     * Time when first OUT transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_out_onchain'?: string;
-    /**
-     * Time when first OUT NFT transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_out_nft'?: string;
-    /**
-     * Time when first OUT gaming transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_out_gaming'?: string;
-    /**
-     * Time when first OUT gambling transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'first_txs_out_gambling'?: string;
-    /**
-     * Time when last transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_all_onchain'?: string;
-    /**
-     * Time when last NFT transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_all_nft'?: string;
-    /**
-     * Time when last gaming transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_all_gaming'?: string;
-    /**
-     * Time when last gambling transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_all_gambling'?: string;
-    /**
-     * Time when last IN transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_in_onchain'?: string;
-    /**
-     * Time when last IN NFT transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_in_nft'?: string;
-    /**
-     * Time when last IN gaming transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_in_gaming'?: string;
-    /**
-     * Time when last IN gambling transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_in_gambling'?: string;
-    /**
-     * Time when last OUT transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_out_onchain'?: string;
-    /**
-     * Time when last OUT NFT transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_out_nft'?: string;
-    /**
-     * Time when last OUT gaming transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_out_gaming'?: string;
-    /**
-     * Time when last OUT gambling transaction occurred
-     * @type {string}
-     * @memberof GetAnalytics200Response
-     */
-    'last_txs_out_gambling'?: string;
-}
-/**
- * 
- * @export
- * @interface GetAnalytics200ResponseValue
- */
-export interface GetAnalytics200ResponseValue {
-    /**
-     * Sum of all transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_forever_onchain'?: number;
-    /**
-     * Sum of all NFT transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_forever_nft'?: number;
-    /**
-     * Sum of all gaming transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_forever_gaming'?: number;
-    /**
-     * Sum of all gambling transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_forever_gambling'?: number;
-    /**
-     * Sum of all transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_365_onchain'?: number;
-    /**
-     * Sum of all NFT transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_365_nft'?: number;
-    /**
-     * Sum of all gaming transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_365_gaming'?: number;
-    /**
-     * Sum of all gambling transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_365_gambling'?: number;
-    /**
-     * Sum of all transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_31_60_onchain'?: number;
-    /**
-     * Sum of all NFT transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_31_60_nft'?: number;
-    /**
-     * Sum of all gaming transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_31_60_gaming'?: number;
-    /**
-     * Sum of all gambling transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_31_60_gambling'?: number;
-    /**
-     * Sum of all transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_30_onchain'?: number;
-    /**
-     * Sum of all NFT transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_30_nft'?: number;
-    /**
-     * Sum of all gaming transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_30_gaming'?: number;
-    /**
-     * Sum of all gambling transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_30_gambling'?: number;
-    /**
-     * Sum of all transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_7_onchain'?: number;
-    /**
-     * Sum of all NFT transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_7_nft'?: number;
-    /**
-     * Sum of all gaming transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_7_gaming'?: number;
-    /**
-     * Sum of all gambling transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_all_7_gambling'?: number;
-    /**
-     * Sum of all IN transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_forever_onchain'?: number;
-    /**
-     * Sum of all IN NFT transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_forever_nft'?: number;
-    /**
-     * Sum of all IN gaming transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_forever_gaming'?: number;
-    /**
-     * Sum of all IN gambling transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_forever_gambling'?: number;
-    /**
-     * Sum of all IN transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_365_onchain'?: number;
-    /**
-     * Sum of all IN NFT transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_365_nft'?: number;
-    /**
-     * Sum of all IN gaming transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_365_gaming'?: number;
-    /**
-     * Sum of all IN gambling transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_365_gambling'?: number;
-    /**
-     * Sum of all IN transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_31_60_onchain'?: number;
-    /**
-     * Sum of all IN NFT transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_31_60_nft'?: number;
-    /**
-     * Sum of all IN gaming transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_31_60_gaming'?: number;
-    /**
-     * Sum of all IN gambling transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_31_60_gambling'?: number;
-    /**
-     * Sum of all IN transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_30_onchain'?: number;
-    /**
-     * Sum of all IN NFT transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_30_nft'?: number;
-    /**
-     * Sum of all IN gaming transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_30_gaming'?: number;
-    /**
-     * Sum of all IN gambling transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_30_gambling'?: number;
-    /**
-     * Sum of all IN transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_7_onchain'?: number;
-    /**
-     * Sum of all IN NFT transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_7_nft'?: number;
-    /**
-     * Sum of all IN gaming transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_7_gaming'?: number;
-    /**
-     * Sum of all IN gambling transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_in_7_gambling'?: number;
-    /**
-     * Sum of all OUT transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_forever_onchain'?: number;
-    /**
-     * Sum of all OUT NFT transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_forever_nft'?: number;
-    /**
-     * Sum of all OUT gaming transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_forever_gaming'?: number;
-    /**
-     * Sum of all OUT gambling transactions
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_forever_gambling'?: number;
-    /**
-     * Sum of all OUT transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_365_onchain'?: number;
-    /**
-     * Sum of all OUT NFT transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_365_nft'?: number;
-    /**
-     * Sum of all OUT gaming transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_365_gaming'?: number;
-    /**
-     * Sum of all OUT gambling transactions during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_365_gambling'?: number;
-    /**
-     * Sum of all OUT transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_31_60_onchain'?: number;
-    /**
-     * Sum of all OUT NFT transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_31_60_nft'?: number;
-    /**
-     * Sum of all OUT gaming transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_31_60_gaming'?: number;
-    /**
-     * Sum of all OUT gambling transactions during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_31_60_gambling'?: number;
-    /**
-     * Sum of all OUT transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_30_onchain'?: number;
-    /**
-     * Sum of all OUT NFT transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_30_nft'?: number;
-    /**
-     * Sum of all OUT gaming transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_30_gaming'?: number;
-    /**
-     * Sum of all OUT gambling transactions during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_30_gambling'?: number;
-    /**
-     * Sum of all OUT transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_7_onchain'?: number;
-    /**
-     * Sum of all OUT NFT transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_7_nft'?: number;
-    /**
-     * Sum of all OUT gaming transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_7_gaming'?: number;
-    /**
-     * Sum of all OUT gambling transactions during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'sum_txs_out_7_gambling'?: number;
-    /**
-     * Maximum balance
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_forever_onchain'?: number;
-    /**
-     * Maximum NFT balance
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_forever_nft'?: number;
-    /**
-     * Maximum gaming balance
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_forever_gaming'?: number;
-    /**
-     * Maximum gambing balance
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_forever_gambling'?: number;
-    /**
-     * Maximum balance during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_365_onchain'?: number;
-    /**
-     * Maximum NFT balance during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_365_nft'?: number;
-    /**
-     * Maximum gaming balance during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_365_gaming'?: number;
-    /**
-     * Maximum gambling balance during last year
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_365_gambling'?: number;
-    /**
-     * Maximum balance during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_31_60_onchain'?: number;
-    /**
-     * Maximum NFT balance during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_31_60_nft'?: number;
-    /**
-     * Maximum gaming balance during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_31_60_gaming'?: number;
-    /**
-     * Maximum gambling balance during previous month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_31_60_gambling'?: number;
-    /**
-     * Maximum balance during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_30_onchain'?: number;
-    /**
-     * Maximum NFT balance during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_30_nft'?: number;
-    /**
-     * Maximum gaming balance during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_30_gaming'?: number;
-    /**
-     * Maximum gambling balance during last month
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_30_gambling'?: number;
-    /**
-     * Maximum balance during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_7_onchain'?: number;
-    /**
-     * Maximum NFT balance during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_7_nft'?: number;
-    /**
-     * Maximum gaming balance during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_7_gaming'?: number;
-    /**
-     * Maximum gambling balance during last week
-     * @type {number}
-     * @memberof GetAnalytics200ResponseValue
-     */
-    'max_balance_7_gambling'?: number;
 }
 /**
  * 
@@ -3549,21 +3549,127 @@ export class AggregatedInfoApi extends BaseAPI {
 export const AnalyticsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Get analytics focused on gaming. All empty values are omitted from the response. Values are recalculated once per day.
-         * @summary Get analytics focused on gaming
+         * Get analytics focused on gaming for specified account and provider. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for specified account and provider
          * @param {string} accountProvider URL value from account_providers method
          * @param {string} accountId Account ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAnalytics: async (accountProvider: string, accountId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getAccountAnalytics: async (accountProvider: string, accountId: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'accountProvider' is not null or undefined
-            assertParamExists('getAnalytics', 'accountProvider', accountProvider)
+            assertParamExists('getAccountAnalytics', 'accountProvider', accountProvider)
             // verify required parameter 'accountId' is not null or undefined
-            assertParamExists('getAnalytics', 'accountId', accountId)
+            assertParamExists('getAccountAnalytics', 'accountId', accountId)
             const localVarPath = `/v1/analytics/{account_provider}/account/{account_id}/stats`
                 .replace(`{${"account_provider"}}`, encodeURIComponent(String(accountProvider)))
                 .replace(`{${"account_id"}}`, encodeURIComponent(String(accountId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserJWT required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get analytics focused on gaming for whole project. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for whole project
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getProjectAnalytics: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/v1/analytics/project/stats`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserJWT required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get analytics focused on gaming for specified provider. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for specified provider
+         * @param {string} accountProvider URL value from account_providers method
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getProviderAnalytics: async (accountProvider: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'accountProvider' is not null or undefined
+            assertParamExists('getProviderAnalytics', 'accountProvider', accountProvider)
+            const localVarPath = `/v1/analytics/{account_provider}/stats`
+                .replace(`{${"account_provider"}}`, encodeURIComponent(String(accountProvider)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication UserJWT required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Get analytics focused on gaming for this user. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for this user
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getUserAnalytics: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/v1/analytics/user/stats`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3601,15 +3707,46 @@ export const AnalyticsApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = AnalyticsApiAxiosParamCreator(configuration)
     return {
         /**
-         * Get analytics focused on gaming. All empty values are omitted from the response. Values are recalculated once per day.
-         * @summary Get analytics focused on gaming
+         * Get analytics focused on gaming for specified account and provider. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for specified account and provider
          * @param {string} accountProvider URL value from account_providers method
          * @param {string} accountId Account ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getAnalytics(accountProvider: string, accountId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetAnalytics200Response>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getAnalytics(accountProvider, accountId, options);
+        async getAccountAnalytics(accountProvider: string, accountId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Analytics>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getAccountAnalytics(accountProvider, accountId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Get analytics focused on gaming for whole project. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for whole project
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getProjectAnalytics(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: Analytics; }>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getProjectAnalytics(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Get analytics focused on gaming for specified provider. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for specified provider
+         * @param {string} accountProvider URL value from account_providers method
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getProviderAnalytics(accountProvider: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: Analytics; }>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getProviderAnalytics(accountProvider, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Get analytics focused on gaming for this user. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for this user
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getUserAnalytics(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: Analytics; }>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getUserAnalytics(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -3623,15 +3760,43 @@ export const AnalyticsApiFactory = function (configuration?: Configuration, base
     const localVarFp = AnalyticsApiFp(configuration)
     return {
         /**
-         * Get analytics focused on gaming. All empty values are omitted from the response. Values are recalculated once per day.
-         * @summary Get analytics focused on gaming
+         * Get analytics focused on gaming for specified account and provider. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for specified account and provider
          * @param {string} accountProvider URL value from account_providers method
          * @param {string} accountId Account ID
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAnalytics(accountProvider: string, accountId: string, options?: any): AxiosPromise<GetAnalytics200Response> {
-            return localVarFp.getAnalytics(accountProvider, accountId, options).then((request) => request(axios, basePath));
+        getAccountAnalytics(accountProvider: string, accountId: string, options?: any): AxiosPromise<Analytics> {
+            return localVarFp.getAccountAnalytics(accountProvider, accountId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get analytics focused on gaming for whole project. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for whole project
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getProjectAnalytics(options?: any): AxiosPromise<{ [key: string]: Analytics; }> {
+            return localVarFp.getProjectAnalytics(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get analytics focused on gaming for specified provider. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for specified provider
+         * @param {string} accountProvider URL value from account_providers method
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getProviderAnalytics(accountProvider: string, options?: any): AxiosPromise<{ [key: string]: Analytics; }> {
+            return localVarFp.getProviderAnalytics(accountProvider, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Get analytics focused on gaming for this user. All empty values are omitted from the response. Values are recalculated once per day.
+         * @summary Get analytics focused on gaming for this user
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getUserAnalytics(options?: any): AxiosPromise<{ [key: string]: Analytics; }> {
+            return localVarFp.getUserAnalytics(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -3644,16 +3809,50 @@ export const AnalyticsApiFactory = function (configuration?: Configuration, base
  */
 export class AnalyticsApi extends BaseAPI {
     /**
-     * Get analytics focused on gaming. All empty values are omitted from the response. Values are recalculated once per day.
-     * @summary Get analytics focused on gaming
+     * Get analytics focused on gaming for specified account and provider. All empty values are omitted from the response. Values are recalculated once per day.
+     * @summary Get analytics focused on gaming for specified account and provider
      * @param {string} accountProvider URL value from account_providers method
      * @param {string} accountId Account ID
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AnalyticsApi
      */
-    public getAnalytics(accountProvider: string, accountId: string, options?: AxiosRequestConfig) {
-        return AnalyticsApiFp(this.configuration).getAnalytics(accountProvider, accountId, options).then((request) => request(this.axios, this.basePath));
+    public getAccountAnalytics(accountProvider: string, accountId: string, options?: AxiosRequestConfig) {
+        return AnalyticsApiFp(this.configuration).getAccountAnalytics(accountProvider, accountId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get analytics focused on gaming for whole project. All empty values are omitted from the response. Values are recalculated once per day.
+     * @summary Get analytics focused on gaming for whole project
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AnalyticsApi
+     */
+    public getProjectAnalytics(options?: AxiosRequestConfig) {
+        return AnalyticsApiFp(this.configuration).getProjectAnalytics(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get analytics focused on gaming for specified provider. All empty values are omitted from the response. Values are recalculated once per day.
+     * @summary Get analytics focused on gaming for specified provider
+     * @param {string} accountProvider URL value from account_providers method
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AnalyticsApi
+     */
+    public getProviderAnalytics(accountProvider: string, options?: AxiosRequestConfig) {
+        return AnalyticsApiFp(this.configuration).getProviderAnalytics(accountProvider, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Get analytics focused on gaming for this user. All empty values are omitted from the response. Values are recalculated once per day.
+     * @summary Get analytics focused on gaming for this user
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AnalyticsApi
+     */
+    public getUserAnalytics(options?: AxiosRequestConfig) {
+        return AnalyticsApiFp(this.configuration).getUserAnalytics(options).then((request) => request(this.axios, this.basePath));
     }
 }
 
