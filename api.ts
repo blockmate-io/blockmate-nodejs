@@ -708,149 +708,149 @@ export interface Analytics {
      */
     'count_txs_out_7_gambling'?: number;
     /**
-     * Time when first transaction occurred
-     * @type {string}
+     * Unix timestamp when first transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_all_onchain'?: string;
+    'first_txs_all_onchain'?: number;
     /**
-     * Time when first NFT transaction occurred
-     * @type {string}
+     * Unix timestamp when first NFT transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_all_nft'?: string;
+    'first_txs_all_nft'?: number;
     /**
-     * Time when first gaming transaction occurred
-     * @type {string}
+     * Unix timestamp when first gaming transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_all_gaming'?: string;
+    'first_txs_all_gaming'?: number;
     /**
-     * Time when first gambling transaction occurred
-     * @type {string}
+     * Unix timestamp when first gambling transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_all_gambling'?: string;
+    'first_txs_all_gambling'?: number;
     /**
-     * Time when first IN transaction occurred
-     * @type {string}
+     * Unix timestamp when first IN transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_in_onchain'?: string;
+    'first_txs_in_onchain'?: number;
     /**
-     * Time when first IN NFT transaction occurred
-     * @type {string}
+     * Unix timestamp when first IN NFT transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_in_nft'?: string;
+    'first_txs_in_nft'?: number;
     /**
-     * Time when first IN gaming transaction occurred
-     * @type {string}
+     * Unix timestamp when first IN gaming transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_in_gaming'?: string;
+    'first_txs_in_gaming'?: number;
     /**
-     * Time when first IN gambling transaction occurred
-     * @type {string}
+     * Unix timestamp when first IN gambling transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_in_gambling'?: string;
+    'first_txs_in_gambling'?: number;
     /**
-     * Time when first OUT transaction occurred
-     * @type {string}
+     * Unix timestamp when first OUT transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_out_onchain'?: string;
+    'first_txs_out_onchain'?: number;
     /**
-     * Time when first OUT NFT transaction occurred
-     * @type {string}
+     * Unix timestamp when first OUT NFT transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_out_nft'?: string;
+    'first_txs_out_nft'?: number;
     /**
-     * Time when first OUT gaming transaction occurred
-     * @type {string}
+     * Unix timestamp when first OUT gaming transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_out_gaming'?: string;
+    'first_txs_out_gaming'?: number;
     /**
-     * Time when first OUT gambling transaction occurred
-     * @type {string}
+     * Unix timestamp when first OUT gambling transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'first_txs_out_gambling'?: string;
+    'first_txs_out_gambling'?: number;
     /**
-     * Time when last transaction occurred
-     * @type {string}
+     * Unix timestamp when last transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_all_onchain'?: string;
+    'last_txs_all_onchain'?: number;
     /**
-     * Time when last NFT transaction occurred
-     * @type {string}
+     * Unix timestamp when last NFT transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_all_nft'?: string;
+    'last_txs_all_nft'?: number;
     /**
-     * Time when last gaming transaction occurred
-     * @type {string}
+     * Unix timestamp when last gaming transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_all_gaming'?: string;
+    'last_txs_all_gaming'?: number;
     /**
-     * Time when last gambling transaction occurred
-     * @type {string}
+     * Unix timestamp when last gambling transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_all_gambling'?: string;
+    'last_txs_all_gambling'?: number;
     /**
-     * Time when last IN transaction occurred
-     * @type {string}
+     * Unix timestamp when last IN transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_in_onchain'?: string;
+    'last_txs_in_onchain'?: number;
     /**
-     * Time when last IN NFT transaction occurred
-     * @type {string}
+     * Unix timestamp when last IN NFT transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_in_nft'?: string;
+    'last_txs_in_nft'?: number;
     /**
-     * Time when last IN gaming transaction occurred
-     * @type {string}
+     * Unix timestamp when last IN gaming transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_in_gaming'?: string;
+    'last_txs_in_gaming'?: number;
     /**
-     * Time when last IN gambling transaction occurred
-     * @type {string}
+     * Unix timestamp when last IN gambling transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_in_gambling'?: string;
+    'last_txs_in_gambling'?: number;
     /**
-     * Time when last OUT transaction occurred
-     * @type {string}
+     * Unix timestamp when last OUT transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_out_onchain'?: string;
+    'last_txs_out_onchain'?: number;
     /**
-     * Time when last OUT NFT transaction occurred
-     * @type {string}
+     * Unix timestamp when last OUT NFT transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_out_nft'?: string;
+    'last_txs_out_nft'?: number;
     /**
-     * Time when last OUT gaming transaction occurred
-     * @type {string}
+     * Unix timestamp when last OUT gaming transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_out_gaming'?: string;
+    'last_txs_out_gaming'?: number;
     /**
-     * Time when last OUT gambling transaction occurred
-     * @type {string}
+     * Unix timestamp when last OUT gambling transaction occurred
+     * @type {number}
      * @memberof Analytics
      */
-    'last_txs_out_gambling'?: string;
+    'last_txs_out_gambling'?: number;
 }
 /**
  * 
